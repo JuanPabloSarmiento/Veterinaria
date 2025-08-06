@@ -1,7 +1,10 @@
 <template>
-  <label :for="inputName">
+  <div class="flex flex-col">
+    <label :for="inputName" class=" p-1 font-semibold">
     {{ inputLabel }}
+    </label>
     <input
+      class=" bg-amber-50 p-1.5 rounded-sm"
       required
       @invalid="error"
       @input="valor"
@@ -10,7 +13,9 @@
       :id="inputName"
       :placeholder="placeholder"
       :value="modelValue"
-  /></label>
+  />
+  </div>
+  
 </template>
 
 <script setup>

@@ -1,19 +1,19 @@
 <template>
   <nav>
     <section>
-      <ul>
-        <li>buenas</li>
-        <li>buenas</li>
-        <li>buenas</li>
-        <li>buenas</li>
+      <ul class=" flex gap-2 ">
+        <li tabindex="1"><router-link to="/login">login</router-link></li>
+        <li tabindex="1">buenas</li>
+        <li tabindex="1">buenas</li>
+        <li tabindex="1">buenas</li>
       </ul>
     </section>
 
-    <main>
-      <router-link to="/login">login</router-link>
-    </main>
+   
   </nav>
-
-  <RouterView />
+  <main>
+      <RouterView />
+    </main>
+  
 </template>
 <script></script>
