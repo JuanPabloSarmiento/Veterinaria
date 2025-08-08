@@ -4,7 +4,7 @@
     {{ inputLabel }}
     </label>
     <input
-      class=" bg-amber-50 p-1.5 rounded-sm"
+      class=" bg-amber-50 p-1.5 rounded-sm lg:w-xs"
       required
       @invalid="error"
       @input="valor"

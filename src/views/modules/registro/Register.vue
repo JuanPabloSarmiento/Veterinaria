@@ -1,19 +1,10 @@
 <template>
-  <main class="p-6 w-dvw h-screen">
+  <main class="flex p-6 w-screen h-dvh bg-fixed box-border">
     
     <!-- Formulario de registro -->
-    <form 
-      @submit.prevent="validacion" 
-      action="" 
-      class="bg-stone-700 flex flex-col m-auto w-md gap-4 items-center p-2 rounded-sm"
-    >
-      <!-- Encabezado -->
-      <h2 class="first-letter:text-cyan-600 first-letter:text-4xl text-cyan-50 text-2xl font-bold">
-        Educatdog
-      </h2>
-      <h2 class="text-cyan-50 bg-stone-900 p-2 w-md text-center text-2xl font-bold">
-        Inicia sesion
-      </h2>
+   <form @submit.prevent="validacion" action="" class=" bg-stone-700 box-border  flex flex-col m-auto md:w-md lg:w-lg sm:w-sm gap-4 items-center p-2 rounded-sm">
+      <h2 class=" first-letter:text-cyan-600 first-letter:text-4xl text-cyan-50 text-2xl font-bold">Educatdog</h2>
+      <h2 class=" text-cyan-50 bg-stone-900 p-2 sm:w-sm md:w-md lg:w-lg  text-center  text-2xl font-bold">Inicia sesion</h2>
 
       <!-- Inputs del formulario -->
       <InputV 
@@ -60,18 +51,27 @@
 // Componentes importados
 import ButtonV from '@/components/ButtonV.vue'
 import InputV from '@/components/InputV.vue'
-
+import { sesion } from '@/stores/funcLogin'
 // Composición de Vue
-import { ref } from 'vue'
+import { ref,onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 
 // Ruta base del API
 import { api } from '@/apis/backVeterinaria'
 
 // Variables reactivas para los campos del formulario
-const nombre = ref('')
-const telefono = ref('')
-const correo = ref('')
-const contrasena = ref('')
+const nombre = ref('');
+const telefono = ref('');
+const correo = ref('');
+const contrasena = ref('');
+const store = sesion();
+const router = useRouter();
+onMounted(() => {
+  store.cargar();
+  if (store.elemento.length > 0) {
+    router.push('/usuario')
+  }
+})
 
 // Función de validación y envío de datos
 async function validacion() {
