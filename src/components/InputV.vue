@@ -26,12 +26,9 @@ const promps = defineProps({
   placeholder: String,
   modelValue: [String, Number],
 })
-const emit = defineEmits(['update:modelValue'])
-function error(e) {
-  e.targer.setCustomValidity('este caompo es obligatorio')
-}
-function valor(e){
-  e.target.setCustomValidity('')
-  emit('update:modelValue',e.target.value)
-}
+ const emit = defineEmits(['update:modelValue'])
+
+ function valor(e) {
+    emit('update:modelValue',e.target.value)
+ }
 </script>
