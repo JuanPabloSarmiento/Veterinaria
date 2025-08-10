@@ -1,7 +1,7 @@
 <template>
-  <main class=" p-6 w-screen h-dvh bg-fixed box-border   " >
+  <main class=" flex flex-wrap justify-center align-middle p-5   bg-fixed box-border " >
     
-    <form @submit.prevent="mostrarUsuarios" action="" class=" h-auto mt-12 sm:h-4/6 sm:m-auto justify-center bg-stone-700 box-border  flex flex-col  md:w-md sm:w-sm gap-4 items-center p-2 rounded-sm">
+    <form @submit.prevent="mostrarUsuarios" action="" class=" h-9/12 min-h-min  sm:m-auto justify-center bg-stone-700 box-border  flex flex-col  md:w-md sm:w-sm gap-4 items-center p-2 rounded-sm">
       <h2 class=" first-letter:text-cyan-600 first-letter:text-4xl text-cyan-50 text-2xl font-bold">Educatdog</h2>
       <h2 class=" text-cyan-50 bg-stone-900 p-2 sm:w-sm md:w-md  text-center  text-2xl font-bold">Inicia sesion</h2>
       
@@ -59,7 +59,4 @@ async function mostrarUsuarios() {
 
 </script>
 <style scoped>
-main{
-  background-image: url(/public/images/fondo.png);
-}
 </style>

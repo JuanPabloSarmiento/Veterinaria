@@ -1,10 +1,10 @@
 <template>
-  <main class="flex p-6 w-screen h-dvh bg-fixed box-border">
+  <main class="flex p-6 w-screen  bg-fixed box-border">
     
     <!-- Formulario de registro -->
    <form @submit.prevent="validacion" action="" class=" bg-stone-700 box-border  flex flex-col m-auto md:w-md lg:w-lg sm:w-sm gap-4 items-center p-2 rounded-sm">
       <h2 class=" first-letter:text-cyan-600 first-letter:text-4xl text-cyan-50 text-2xl font-bold">Educatdog</h2>
-      <h2 class=" text-cyan-50 bg-stone-900 p-2 sm:w-sm md:w-md lg:w-lg  text-center  text-2xl font-bold">Inicia sesion</h2>
+      <h2 class=" text-cyan-50 bg-stone-900 p-2 sm:w-sm md:w-md lg:w-lg  text-center  text-2xl font-bold">Registrate</h2>
 
       <!-- Inputs del formulario -->
       <InputV 
@@ -123,8 +123,5 @@ async function validacion() {
 </script>
 
 <style scoped>
-main {
-  background-image: url(/public/images/fondo.png);
-  background-repeat: repeat;
-}
+
 </style>
