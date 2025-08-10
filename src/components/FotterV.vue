@@ -1,5 +1,5 @@
 <template>
-    <section class=" absolute bottom-0 bg-cyan-700 text-cyan-50 font-semibold w-screen">
+    <section class="  bottom-0  bg-cyan-700 text-cyan-50 font-semibold w-screen">
         <div class="grid grid-cols-2 items-center text-center ">
             <p class="p-4">Contacto : Kilomatro 7, Mosquera, Cundinamarca <br> | Teléfono (+573133556315) | <br> educatlog@gmail.com</p>
             <ul class="flex flex-col gap-3 ">

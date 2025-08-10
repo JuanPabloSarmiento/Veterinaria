@@ -1,8 +1,10 @@
 <template>
 <Nav @salir="cerrarSesion"></Nav>
+<RouterView />
 <FotterV></FotterV>
 </template>
 <script setup>
+import { RouterView } from 'vue-router';
 import ButtonV from '@/components/ButtonV.vue';
 import { onMounted, reactive,ref } from 'vue';
 import { sesion } from '@/stores/funcLogin';
@@ -19,9 +21,13 @@ onMounted(() => {
     }
 })
 function cerrarSesion() {
-    store.cerrar();
+    const confirmar = confirm('¿Esta seguro de salir?');
+    if (confirmar) {
+        store.cerrar();
     store.$reset();
     router.push('/');
+    }
+    
 }
 
 

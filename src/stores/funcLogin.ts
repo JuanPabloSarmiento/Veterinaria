@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 
 interface Usuario {
+  id_usuario:number,
   nombre:string,
   correo: string,
   contrasena: string
@@ -12,8 +13,8 @@ export const sesion = defineStore('dato', {
     elemento: [] as Usuario[],
   }),
   actions: {
-    iniciar({ nombre,correo,contrasena }: Usuario) {
-      this.elemento[0] = { nombre,correo,contrasena }
+    iniciar({ id_usuario,nombre,correo,contrasena }: Usuario) {
+      this.elemento[0] = { id_usuario,nombre,correo,contrasena }
       localStorage.setItem("usuario", JSON.stringify(this.elemento[0]))
     },
     cerrar(){

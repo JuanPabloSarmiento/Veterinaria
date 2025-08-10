@@ -48,10 +48,10 @@ const contrasena= ref('');
 async function mostrarUsuarios() {
   const lista = await getApi('usuarios')
   const user = lista.find(element => 
-    (element.nombre && element.correo == correo.value && element.contrasena == contrasena.value)
+    (element.id_usuario && element.nombre && element.correo == correo.value && element.contrasena == contrasena.value)
   );
   if (user) {
-    store.iniciar({nombre:user.nombre,correo:correo.value,contrasena:contrasena.value})
+    store.iniciar({id_usuario:user.id_usuario ,nombre:user.nombre,correo:correo.value,contrasena:contrasena.value})
 
     router.push('/usuario')
   }

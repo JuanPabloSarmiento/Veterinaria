@@ -1,10 +1,13 @@
 <template>
   <div class="flex flex-col">
-    <label :for="inputName" class=" p-1 font-semibold">
+    <label :for="inputName" class=" p-1 text-[1.3rem] font-extrabold">
     {{ inputLabel }}
     </label>
     <input
-      class=" bg-amber-50 p-1.5 rounded-sm lg:w-xs"
+      class=" bg-amber-50 p-1.5 rounded-sm lg:w-xs
+      outline-transparent outline-offset-8 opacity-60 focus:outline-offset-1 focus:outline-cyan-700
+      transition-outline duration-[300ms] ease-out
+      "
       required
       @invalid="error"
       @input="valor"
